@@ -1159,7 +1159,7 @@
             }
         ],
         "x": 620,
-        "y": 260,
+        "y": 280,
         "wires": []
     },
     {
@@ -1175,7 +1175,7 @@
             }
         ],
         "x": 620,
-        "y": 320,
+        "y": 360,
         "wires": []
     },
     {
@@ -1205,7 +1205,7 @@
         "name": "单设备-子流程",
         "info": "",
         "x": 790,
-        "y": 260,
+        "y": 280,
         "wires": []
     },
     {
@@ -1215,7 +1215,7 @@
         "name": "单设备-子流程",
         "info": "",
         "x": 790,
-        "y": 320,
+        "y": 360,
         "wires": []
     },
     {
@@ -1242,90 +1242,6 @@
         "info": "",
         "x": 810,
         "y": 380,
-        "wires": []
-    },
-    {
-        "id": "4474a539b459f561",
-        "type": "subflow:891217bc10092296",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "env": [
-            {
-                "name": "REIP",
-                "value": "172.16.66.82",
-                "type": "str"
-            }
-        ],
-        "x": 640,
-        "y": 760,
-        "wires": []
-    },
-    {
-        "id": "5603ba77cb508953",
-        "type": "inject",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "REIP",
-                "v": "172.16.66.82",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "333",
-        "payloadType": "str",
-        "x": 390,
-        "y": 760,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3bd3d898b67da875",
-        "type": "tcp in",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "server": "server",
-        "host": "",
-        "port": "2300",
-        "datamode": "stream",
-        "datatype": "utf8",
-        "newline": "",
-        "topic": "",
-        "trim": false,
-        "base64": false,
-        "tls": "",
-        "x": 380,
-        "y": 820,
-        "wires": [
-            [
-                "ad90a45aa10c9f82"
-            ]
-        ]
-    },
-    {
-        "id": "ad90a45aa10c9f82",
-        "type": "debug",
-        "z": "66ac43b7fa3454ca",
-        "name": "debug 16",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 820,
         "wires": []
     },
     {
@@ -1425,12 +1341,20 @@
         "repair": false,
         "outputs": 4,
         "x": 590,
-        "y": 300,
+        "y": 280,
         "wires": [
-            [],
-            [],
-            [],
-            []
+            [
+                "c005a6c39db1ec0d"
+            ],
+            [
+                "dc5318e9bcec6f5f"
+            ],
+            [
+                "4ce5aa3a7cc808e0"
+            ],
+            [
+                "326a3ba81444dbe6"
+            ]
         ]
     },
     {
@@ -1517,7 +1441,9 @@
         "x": 590,
         "y": 400,
         "wires": [
-            []
+            [
+                "7a196807f234e0c3"
+            ]
         ]
     },
     {
@@ -1561,8 +1487,12 @@
         "x": 590,
         "y": 500,
         "wires": [
-            [],
-            []
+            [
+                "a65f4cb104df7a6d"
+            ],
+            [
+                "237da62970fd41be"
+            ]
         ]
     },
     {
@@ -1686,201 +1616,6 @@
         "x": 360,
         "y": 320,
         "wires": []
-    },
-    {
-        "id": "7154657bfaaf1600",
-        "type": "debug",
-        "z": "66ac43b7fa3454ca",
-        "name": "debug 18",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "c5f7d02f0f353196",
-        "type": "inject",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 80,
-        "y": 140,
-        "wires": [
-            [
-                "cc6ad9c25dbf825a"
-            ]
-        ]
-    },
-    {
-        "id": "cc6ad9c25dbf825a",
-        "type": "device-command",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "device": "SC010",
-        "command": "Auto",
-        "x": 270,
-        "y": 140,
-        "wires": [
-            [
-                "7154657bfaaf1600"
-            ]
-        ]
-    },
-    {
-        "id": "3c72170bc319af41",
-        "type": "device-command",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "device": "MX0402",
-        "command": "UNMUTE",
-        "cmdValue": "SET AUD_MUTE ALL OFF",
-        "x": 330,
-        "y": 680,
-        "wires": [
-            [
-                "d7487aa35fde299e"
-            ]
-        ]
-    },
-    {
-        "id": "d7487aa35fde299e",
-        "type": "debug",
-        "z": "66ac43b7fa3454ca",
-        "name": "debug 19",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "c73c7f8f754bea05",
-        "type": "inject",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 130,
-        "y": 680,
-        "wires": [
-            [
-                "3c72170bc319af41"
-            ]
-        ]
-    },
-    {
-        "id": "b048694db1fd33da",
-        "type": "device-command",
-        "z": "66ac43b7fa3454ca",
-        "name": "1",
-        "device": "CAM600",
-        "command": "Presenter Tracking",
-        "x": 350,
-        "y": 1080,
-        "wires": [
-            [
-                "ea596d498e908d39"
-            ]
-        ]
-    },
-    {
-        "id": "ea596d498e908d39",
-        "type": "debug",
-        "z": "66ac43b7fa3454ca",
-        "name": "debug 27",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "c753ef2ef55c1a30",
-        "type": "inject",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 1080,
-        "wires": [
-            [
-                "b048694db1fd33da"
-            ]
-        ]
-    },
-    {
-        "id": "ef5d128a35797395",
-        "type": "device-command",
-        "z": "66ac43b7fa3454ca",
-        "name": "",
-        "device": "CAM600",
-        "command": "Auto Framing",
-        "cmdValue": "",
-        "x": 230,
-        "y": 500,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "a6c467bf93dca62b",
@@ -10296,6 +10031,60 @@
         "statusType": "auto",
         "x": 1000,
         "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8aa859640849a524",
+        "type": "subflow",
+        "name": "MUTE设置",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 240,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "75b62a2d12dda94b"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "75b62a2d12dda94b",
+        "type": "device-command",
+        "z": "8aa859640849a524",
+        "name": "Mute/UNMuTE",
+        "device": "MX0402",
+        "command": "MUTE",
+        "cmdValue": "SET AUD_MUTE ALL ON",
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [
+                "41be7e7bdfa6e699"
+            ]
+        ]
+    },
+    {
+        "id": "41be7e7bdfa6e699",
+        "type": "debug",
+        "z": "8aa859640849a524",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 220,
         "wires": []
     }
 ]
