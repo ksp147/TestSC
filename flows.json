@@ -1425,7 +1425,7 @@
         "repair": false,
         "outputs": 4,
         "x": 590,
-        "y": 220,
+        "y": 300,
         "wires": [
             [],
             [],
@@ -1699,8 +1699,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
-        "y": 60,
+        "x": 520,
+        "y": 140,
         "wires": []
     },
     {
