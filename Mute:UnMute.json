@@ -1,0 +1,56 @@
+[
+    {
+        "id": "8aa859640849a524",
+        "type": "subflow",
+        "name": "MUTE设置",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 240,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "75b62a2d12dda94b"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "75b62a2d12dda94b",
+        "type": "device-command",
+        "z": "8aa859640849a524",
+        "name": "Mute/UNMuTE",
+        "device": "MX0402",
+        "command": "MUTE",
+        "cmdValue": "SET AUD_MUTE ALL ON",
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [
+                "41be7e7bdfa6e699"
+            ]
+        ]
+    },
+    {
+        "id": "41be7e7bdfa6e699",
+        "type": "debug",
+        "z": "8aa859640849a524",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    }
+]
